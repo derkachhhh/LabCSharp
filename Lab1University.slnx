@@ -3,4 +3,5 @@
   <Project Path="University.Models/University.Models.csproj" />
   <Project Path="University.Presentation/University.Presentation.csproj" />
   <Project Path="University.Services/University.Services.csproj" />
+  <Project Path="University.UI/University.UI.csproj" />
 </Solution>

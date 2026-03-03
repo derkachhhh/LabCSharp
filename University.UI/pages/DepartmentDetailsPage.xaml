@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="University.UI.DepartmentDetailsPage"
+             Title="Кафедра">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+
+        <Label x:Name="TitleLabel" FontSize="22" FontAttributes="Bold"/>
+        <Label x:Name="InfoLabel" Opacity="0.7"/>
+
+        <Label Text="Викладачі" FontSize="18" Margin="0,10,0,0"/>
+
+        <CollectionView x:Name="TeachersList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="12" Margin="0,6" CornerRadius="12">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTeacherTapped" />
+                        </Frame.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding FullName}" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="{Binding Rank}" Opacity="0.7"/>
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
